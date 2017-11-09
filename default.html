@@ -12,22 +12,43 @@
             <img src="images/logo2.png">
         </a>
     </div>
-    <nav class="topnav">
-        <a href="/"><span>首页</span><span class="en">Home</span></a>
-        <a href="/about.html"><span>关于我</span><span class="en">About</span></a>
-        <a href="/news/"><span>慢生活</span><span class="en">Life</span></a>
-        <a href="/download/"><span>模板分享</span><span class="en">Share</span></a>
-        <a href="/jstt/"><span>学无止境</span><span class="en">Learn</span></a>
-        <a href="/e/tool/gbook/?bid=1"><span>留言</span><span class="en">Saying</span></a></nav>
+    <nav class="topnav" id="topnav1">
+        <a href="/">
+            <span>首页</span>
+            <span class="en">Home</span>
+        </a>
+        <a href="/about.html">
+            <span>关于我</span>
+            <span class="en">About</span>
+        </a>
+        <a href="/news/">
+            <span>慢生活</span>
+            <span class="en">Life</span>
+        </a>
+        <a href="/download/">
+            <span>模板分享</span>
+            <span class="en">Share</span>
+        </a>
+        <a href="/jstt/">
+            <span>学无止境</span>
+            <span class="en">Learn</span>
+        </a>
+        <a href="/e/tool/gbook/?bid=1">
+            <span>留言</span>
+            <span class="en">Saying</span>
+        </a>
+    </nav>
 </header>
 <article>
     <div class="container">
         <h2 class="ctitle"><b>个人博客</b> <span>好咖啡要和朋友一起品尝</span></h2>
-        <div class="blog">
-            <figure>
+        <div class="blog" id="blog">
+            <figure id="figure" >
                 <ul>
                     <a href="#" target="_blank" title="html5个人博客模板主题《心蓝时间轴》">
-                        <img src="images/01.jpg"><span>html5个人博客模板主题《心蓝时间轴》</span></a>
+                        <img src="images/01.jpg">
+                        <span class="">html5个人博客模板主题《心蓝时间轴》</span>
+                    </a>
                 </ul>
                 <p><a href="#" target="_blank" title="html5个人博客模板主题《心蓝时间轴》">html5个人博客模板主题《心蓝时间轴》</a></p>
                 <figcaption>Html5+css3个人博客模板，主题《心蓝时间轴》，使用css3技术实现网站动画效果，主要模块是时间轴部分.主题颜色为蓝色.目前版本还在测试当</figcaption>
@@ -39,7 +60,8 @@
             </ul>
             <p><a href="#" target="_blank" title="个人博客模板古典系列之——江南墨卷Ht">个人博客模板古典系列之——江南墨卷Ht</a></p>
             <figcaption>一共是四个页面，首页，图文列表，图片列表，文字内容。此模板风格为中国古典风格，山水画墨迹成就一幅江南墨卷。页面首页设计较为简单，</figcaption>
-        </figure><figure>
+        </figure>
+            <figure>
             <ul>
                 <a href="#" target="_blank" title="古典风格-个人博客模板">
                     <img src="images/03.gif"><span>古典风格-个人博客模板</span></a>
@@ -97,4 +119,38 @@
 </article>
 <footer> Design by DanceSmile <a href="/">蜀ICP备11002373号-1</a> </footer>
 </body>
+<script src="js/ajax.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/01-index.js"></script>
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script>
+    function yuShow(){
+        var fi=document.getElementById("blog").getElementsByTagName("a");
+        for(var i=0;i<fi.length;i++){
+            fi[i].onmouseover=function(){
+                this.className+=(this.className.length>0?" ":"")+"showYu";
+            }
+            fi[i].onmouseout=function(){
+            this.className=this.className.replace("showYu","");
+            }
+        }
+    }
+    function showList(){
+        var s1=document.getElementById("topnav1").getElementsByTagName("a");
+        for(var i=0;i<s1.length;i++){
+            s1[i].onmouseover=function(){
+                console.log("111");
+                this.className+=(this.className.length>0?" ":"")+"showen";
+            }
+            s1[i].onmouseout=function(){
+                console.log("222");
+                this.className=this.className.replace("showen","");
+            }
+        }
+    }
+    showList();
+    window.onload=yuShow;
+</script>
 </html>
