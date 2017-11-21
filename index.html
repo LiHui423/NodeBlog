@@ -1,199 +1,161 @@
-<!doctype html>
-<!--
-  Material Design Lite
-  Copyright 2015 Google Inc. All rights reserved.
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License
--->
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Material Design Lite</title>
-
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
-
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
-
-    <link rel="shortcut icon" href="images/favicon.png">
-
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-    }
-    </style>
-  </head>
-  <body>
-    <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
-      <main class="mdl-layout__content">
-        <div class="demo-blog__posts mdl-grid">
-          <div class="mdl-card coffee-pic mdl-cell mdl-cell--8-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="entry.html">Coffee Pic</a></h3>
-            </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-              <div class="minilogo"></div>
-              <div>
-                <strong>The Newist</strong>
-                <span>2 days ago</span>
-              </div>
-            </div>
-          </div>
-          <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
-            <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent">
-              <i class="material-icons mdl-color-text--white" role="presentation">add</i>
-              <span class="visuallyhidden">add</span>
-            </button>
-            <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
-              <img src="images/logo.png">
-              +1,337
-            </div>
-            <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
-              <div>
-                <strong>The Newist</strong>
-              </div>
-              <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="menubtn">
-                <li class="mdl-menu__item">About</li>
-                <li class="mdl-menu__item">Message</li>
-                <li class="mdl-menu__item">Favorite</li>
-                <li class="mdl-menu__item">Search</li>
-              </ul>
-              <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                <i class="material-icons" role="presentation">more_vert</i>
-                <span class="visuallyhidden">show menu</span>
-              </button>
-            </div>
-          </div>
-          <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="entry.html">On the road again</a></h3>
-            </div>
-            <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
-              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-            </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-              <div class="minilogo"></div>
-              <div>
-                <strong>The Newist</strong>
-                <span>2 days ago</span>
-              </div>
-            </div>
-          </div>
-          <div class="mdl-card amazing mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__title mdl-color-text--grey-50">
-              <h3 class="quote"><a href="entry.html">I couldn’t take any pictures but this was an amazing thing…</a></h3>
-            </div>
-            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-            </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-              <div class="minilogo"></div>
-              <div>
-                <strong>The Newist</strong>
-                <span>2 days ago</span>
-              </div>
-            </div>
-          </div>
-          <div class="mdl-card shopping mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="entry.html">Shopping</a></h3>
-            </div>
-            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-            </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-              <div class="minilogo"></div>
-              <div>
-                <strong>The Newist</strong>
-                <span>2 days ago</span>
-              </div>
-            </div>
-          </div>
-          <nav class="demo-nav mdl-cell mdl-cell--12-col">
-            <div class="section-spacer"></div>
-            <a href="entry.html" class="demo-nav__button" title="show more">
-              More
-              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                <i class="material-icons" role="presentation">arrow_forward</i>
-              </button>
-            </a>
-          </nav>
-        </div>
-        <footer class="mdl-mini-footer">
-          <div class="mdl-mini-footer--left-section">
-            <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
-              <span class="visuallyhidden">Twitter</span>
-            </button>
-            <button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">
-              <span class="visuallyhidden">Facebook</span>
-            </button>
-            <button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
-              <span class="visuallyhidden">Google Plus</span>
-            </button>
-          </div>
-          <div class="mdl-mini-footer--right-section">
-            <button class="mdl-mini-footer--social-btn social-btn__share">
-              <i class="material-icons" role="presentation">share</i>
-              <span class="visuallyhidden">share</span>
-            </button>
-          </div>
-        </footer>
-      </main>
-      <div class="mdl-layout__obfuscator"></div>
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Node Blog</title>
+    <link rel="stylesheet" href="css/default.css"/>
+</head>
+<body>
+<header>
+    <div class="login">
+        <a href="login.html">登录</a>
+        <span>|</span>
+        <a href="register.html">注册</a>
     </div>
-    <a href="https://github.com/google/material-design-lite/blob/mdl-1.x/templates/blog/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--white">View Source</a>
-    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  </body>
-  <script>
-    Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
-      var link = el.querySelector('a');
-      if(!link) {
-        return;
-      }
-      var target = link.getAttribute('href');
-      if(!target) {
-        return;
-      }
-      el.addEventListener('click', function() {
-        location.href = target;
-      });
-    });
-  </script>
+    <div class="logo" data-scroll-reveal="enter right over 1s" data-scroll-reveal-id="1" style="-webkit-transform: translatex(0);transform: translatex(0);opacity: 1;-webkit-transition: -webkit-transform 1s ease-in-out 0s,  opacity 1s ease-in-out 0s;transition: transform 1s ease-in-out 0s, opacity 1s ease-in-out 0s;-webkit-perspective: 1000;-webkit-backface-visibility: hidden;" data-scroll-reveal-initialized="true">
+        <a href="/">
+            <img src="images/logo2.png">
+        </a>
+    </div>
+    <nav class="topnav" id="topnav1">
+        <a href="/">
+            <span>首页</span>
+            <span class="en">Home</span>
+        </a>
+        <a href="/about.html">
+            <span>关于我</span>
+            <span class="en">About</span>
+        </a>
+        <a href="/news/">
+            <span>慢生活</span>
+            <span class="en">Life</span>
+        </a>
+        <a href="/download/">
+            <span>模板分享</span>
+            <span class="en">Share</span>
+        </a>
+        <a href="/jstt/">
+            <span>学无止境</span>
+            <span class="en">Learn</span>
+        </a>
+        <a href="/e/tool/gbook/?bid=1">
+            <span>留言</span>
+            <span class="en">Saying</span>
+        </a>
+    </nav>
+</header>
+<article>
+    <div class="container">
+        <h2 class="ctitle"><b>个人博客</b> <span>好咖啡要和朋友一起品尝</span></h2>
+        <div class="blog" id="blog">
+            <figure id="figure" >
+                <ul>
+                    <a href="#" target="_blank" title="html5个人博客模板主题《心蓝时间轴》">
+                        <img src="images/01.jpg">
+                        <span class="">html5个人博客模板主题《心蓝时间轴》</span>
+                    </a>
+                </ul>
+                <p><a href="#" target="_blank" title="html5个人博客模板主题《心蓝时间轴》">html5个人博客模板主题《心蓝时间轴》</a></p>
+                <figcaption>Html5+css3个人博客模板，主题《心蓝时间轴》，使用css3技术实现网站动画效果，主要模块是时间轴部分.主题颜色为蓝色.目前版本还在测试当</figcaption>
+            </figure><figure>
+            <ul>
+                <a href="#" target="_blank" title="个人博客模板古典系列之——江南墨卷Ht">
+                    <img src="images/02.jpg"><span>个人博客模板古典系列之——江南墨卷Ht</span>
+                </a>
+            </ul>
+            <p><a href="#" target="_blank" title="个人博客模板古典系列之——江南墨卷Ht">个人博客模板古典系列之——江南墨卷Ht</a></p>
+            <figcaption>一共是四个页面，首页，图文列表，图片列表，文字内容。此模板风格为中国古典风格，山水画墨迹成就一幅江南墨卷。页面首页设计较为简单，</figcaption>
+        </figure>
+            <figure>
+            <ul>
+                <a href="#" target="_blank" title="古典风格-个人博客模板">
+                    <img src="images/03.gif"><span>古典风格-个人博客模板</span></a>
+            </ul>
+            <p><a href="/download/div/2017-07-13/783.html" target="_blank" title="古典风格-个人博客模板">古典风格-个人博客模板</a></p>
+            <figcaption>这是一个古典风格的个人博客模板，设计比较简单，没有太多花哨的元素，整个有一个山水画背景，画卷轴是中心部分。导航栏使用的是墨迹笔触</figcaption>
+        </figure><figure>
+            <ul>
+                <a href="#" target="_blank" title="个人博客《草根寻梦》—手机版模板">
+                    <img src="http://www.yangqq.com/d/file/download/div/2015-06-28/c634c5e6111938d024804f018f5558b7.jpg"><span>个人博客《草根寻梦》—手机版模板</span></a>
+            </ul>
+            <p><a href="#" target="_blank" title="个人博客《草根寻梦》—手机版模板">个人博客《草根寻梦》—手机版模板</a></p>
+            <figcaption>把帝国7.0系统升级到最新版本7.2，7.2版本主要是增加了一个多终端的功能，于是琢磨着做一个手机模板出来看看，在现在的模板基础上稍微改动</figcaption>
+        </figure><figure>
+            <ul>
+                <a href="#" target="_blank" title="【活动作品】柠檬绿兔小白个人博客模板">
+                    <img src="images/04.png"><span>【活动作品】柠檬绿兔小白个人博客模板</span></a>
+            </ul>
+            <p><a href="#" target="_blank" title="【活动作品】柠檬绿兔小白个人博客模板">【活动作品】柠檬绿兔小白个人博客模板</a></p>
+            <figcaption>展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标签云...此作品设计图作者窦耀宇</figcaption>
+        </figure><figure>
+            <ul>
+                <a href="#" target="_blank" title="情侣博客模板系列之《回忆》Html">
+                    <img src="images/05.jpg"><span>情侣博客模板系列之《回忆》Html</span></a>
+            </ul>
+            <p><a href="#" target="_blank" title="情侣博客模板系列之《回忆》Html">情侣博客模板系列之《回忆》Html</a></p>
+            <figcaption>Html5+css3情侣博客模板，主题《回忆》，使用css3技术实现网站动画效果，主题《回忆》,分为四个主要部分，照片墙、情侣介绍、图文组、祝福</figcaption>
+        </figure><figure>
+            <ul>
+                <a href="#" target="_blank" title="情侣博客模板系列之《回忆》PSD">
+                    <img src="images/06.jpg"><span>情侣博客模板系列之《回忆》PSD</span></a>
+            </ul>
+            <p><a href="/download/div/2014-08-18/727.html" target="_blank" title="情侣博客模板系列之《回忆》PSD">情侣博客模板系列之《回忆》PSD</a></p>
+            <figcaption>情侣博客模板系列之《回忆》,分为四个主要部分，照片墙、情侣介绍、图文组、祝福模块。适合爱晒照片的小情侣，或者喜欢旅行类的朋友们，希</figcaption>
+        </figure><figure>
+            <ul>
+                <a href="#" target="_blank" title="情侣博客模板系列之《初夏》Html">
+                    <img src="images/07.gif"><span>情侣博客模板系列之《初夏》Html</span></a>
+            </ul>
+            <p><a href="/download/div/2014-08-11/726.html" target="_blank" title="情侣博客模板系列之《初夏》Html">情侣博客模板系列之《初夏》Html</a></p>
+            <figcaption>这套情侣博客模板，展示的是首页html，应用到css动画技术、实现文字从右到左逐渐显示的效果，以及时间轴的动画显示效果。</figcaption>
+        </figure><figure>
+            <ul>
+                <a href="#l" target="_blank" title="情侣博客模板系列之《初夏》PSD">
+                    <img src="images/09.jpg"><span>情侣博客模板系列之《初夏》PSD</span></a>
+            </ul>
+            <p><a href="/download/div/2014-06-11/688.html" target="_blank" title="情侣博客模板系列之《初夏》PSD">情侣博客模板系列之《初夏》PSD</a></p>
+            <figcaption>2014情侣博客模板系列之《初夏》。使用单独的情侣博客管理、采用html5+css3、大图背景、时间轴、音乐播放器、性感嘴唇、胡子....使之充满</figcaption>
+        </figure>
+
+        </div>
+        <div class="page"><a title="Total record"><b>29</b> </a><b>1</b><a href="/download/div/index_2.html">2</a><a href="/download/div/index_2.html">&gt;</a><a href="/download/div/index_2.html">&gt;&gt;</a></div>
+    </div>
+
+</article>
+<footer> Design by DanceSmile <a href="/">蜀ICP备11002373号-1</a> </footer>
+</body>
+<script src="js/ajax.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/01-index.js"></script>
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script>
+    function yuShow(){
+        var fi=document.getElementById("blog").getElementsByTagName("a");
+        for(var i=0;i<fi.length;i++){
+            fi[i].onmouseover=function(){
+                this.className+=(this.className.length>0?" ":"")+"showYu";
+            }
+            fi[i].onmouseout=function(){
+            this.className=this.className.replace("showYu","");
+            }
+        }
+    }
+    function showList(){
+        var s1=document.getElementById("topnav1").getElementsByTagName("a");
+        for(var i=0;i<s1.length;i++){
+            s1[i].onmouseover=function(){
+                console.log("111");
+                this.className+=(this.className.length>0?" ":"")+"showen";
+            }
+            s1[i].onmouseout=function(){
+                console.log("222");
+                this.className=this.className.replace("showen","");
+            }
+        }
+    }
+    showList();
+    window.onload=yuShow;
+</script>
 </html>

@@ -1,13 +1,13 @@
 {
-  "name": "NodeBlog",
+  "name": "day9_20171119",
   "version": "1.0.0",
-  "description": "sign-up sign-in demo proj.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",

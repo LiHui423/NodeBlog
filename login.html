@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+    <h1>登录</h1>
+    <input type="text" name="username" placeholder="用户名"><br>
+    <input type="password" name="password" placeholder="密码"><br>
+    <input type="submit" value="登录"><br>
+    <!-- 连接方式提交的请求都是 GET 请求 -->
+    <a href="register.html">注册</a>
+</body>
+<script src="js/jquery.min.js"></script>
+<script>
+    $(function () {
+        $('[type=submit]').click(function () {
+            $.ajax({
+                url: '/signIn',
+                type: 'post',
+                data: {
+                    username: $('[type=text]').val(),
+                    password: $('[type=password]').val()
+                },
+                success: function (data) {
+                    if (data.status === 'OK') {
+                        console.log(data.status);
+                        window.location.href = 'index.html';
+                    } else {
+                        window.location.href = 'login.html';
+                    }
+                },
+                error: function (a, b, c) {
+                    console.log(a);
+                    console.log(b);
+                    console.log(c);
+                }
+            });
+        });
+    });
+</script>
+</html>
